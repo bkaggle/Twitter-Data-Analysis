@@ -36,7 +36,7 @@ class TweetDfExtractor:
 
     # an example function
     def find_statuses_count(self)->list:
-        statuses_count 
+        self.statuses_count
         
     def find_full_text(self)->list:
         text =text = []
@@ -47,26 +47,34 @@ class TweetDfExtractor:
     
     def find_sentiments(self, text)->list:
         
-        return polarity, self.subjectivity
+        return self.polarity, self.subjectivity
 
     def find_created_time(self)->list:
 
        
-        return created_at
+        return self.created_at
 
     def find_source(self)->list:
-        source = 
+        source = []
+        for src in self.tweets_list:
+            source += [src['source']]
 
         return source
 
     def find_screen_name(self)->list:
-        screen_name = 
+        screen_name = []
+        for screen in self.tweets_list:
+            screen_name += [screen['screen_name']]
 
     def find_followers_count(self)->list:
-        followers_count = 
+        followers_count = []
+        for follower in self.tweets_list:
+            followers_count += [follower['followers_count']]
 
     def find_friends_count(self)->list:
-        friends_count = 
+        friends_count =[]
+        for friends in self.tweets_list:
+            friends_count += [friends['friends_count']] 
 
     def is_sensitive(self)->list:
         try:
@@ -80,13 +88,19 @@ class TweetDfExtractor:
         
     
     def find_retweet_count(self)->list:
-        retweet_count = 
+        retweet_count =[]
+        for retweet in self.tweets_list:
+            retweet_count += [retweet['retweet_count']]
 
     def find_hashtags(self)->list:
-        hashtags =
+        hashtags =[]
+        for hash in self.tweets_list:
+            hashtags += [hash['hashtags']]
 
     def find_mentions(self)->list:
-        mentions = 
+        mentions =[]
+        for men in self.tweets_list:
+            mentions += [men['mentions']] 
 
 
     def find_location(self)->list:
