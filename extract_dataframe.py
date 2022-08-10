@@ -39,7 +39,10 @@ class TweetDfExtractor:
         statuses_count 
         
     def find_full_text(self)->list:
-        text = 
+        text =text = []
+        for tweet in self.tweets_list:
+            text += [tweet["full_text"]]
+ 
        
     
     def find_sentiments(self, text)->list:
@@ -47,6 +50,7 @@ class TweetDfExtractor:
         return polarity, self.subjectivity
 
     def find_created_time(self)->list:
+
        
         return created_at
 
